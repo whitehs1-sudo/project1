@@ -100,8 +100,11 @@ st.pyplot(fig2)
 
 st.markdown("""
 **Interpretation:**  
-A rolling average smooths short-term volatility and highlights sustained trends. It reveals structural changes in the labor market—such as prolonged high unemployment during the 1970s oil shocks and steady declines through the late 1990s expansion.
+The rolling average smooths short‑term volatility, revealing sustained labor‑market cycles.  
+Persistent highs in the 1970s and early 1980s reflect structural inflation shocks,  
+while steady declines through the 1990s show prolonged economic expansion.
 """)
+
 
 # -----------------------------
 # Visualization 3 — Seasonal Pattern
