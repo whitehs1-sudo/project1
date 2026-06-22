@@ -39,6 +39,41 @@ ax1.set_ylabel("Rate (%)")
 ax1.grid(True)
 ax1.axvspan(pd.Timestamp('2007-12-01'), pd.Timestamp('2009-06-01'),
             color='gray', alpha=0.3, label='Great Recession')
+# --- Recession shading (NBER major recessions) ---
+recessions = [
+    ('1953-07-01', '1954-05-01'),
+    ('1957-08-01', '1958-04-01'),
+    ('1960-04-01', '1961-02-01'),
+    ('1969-12-01', '1970-11-01'),
+    ('1973-11-01', '1975-03-01'),
+    ('1980-01-01', '1980-07-01'),
+    ('1981-07-01', '1982-11-01'),
+    ('1990-07-01', '1991-03-01'),
+    ('2001-03-01', '2001-11-01'),
+    ('2007-12-01', '2009-06-01'),
+    ('2020-02-01', '2020-04-01')
+]
+
+for start, end in recessions:
+    ax1.axvspan(pd.Timestamp(start), pd.Timestamp(end),
+                color='gray', alpha=0.3)
+
+# --- Optional annotations for major peaks ---
+ax1.annotate('1982 Peak', xy=(pd.Timestamp('1982-11-01'), 10.8),
+             xytext=(pd.Timestamp('1985-01-01'), 11.5),
+             arrowprops=dict(arrowstyle='->', color='white'),
+             color='white')
+ax1.annotate('2009 Peak', xy=(pd.Timestamp('2009-10-01'), 10.0),
+             xytext=(pd.Timestamp('2011-01-01'), 11.0),
+             arrowprops=dict(arrowstyle='->', color='white'),
+             color='white')
+ax1.annotate('2020 Spike', xy=(pd.Timestamp('2020-04-01'), 14.7),
+             xytext=(pd.Timestamp('2021-06-01'), 13.0),
+             arrowprops=dict(arrowstyle='->', color='white'),
+             color='white')
+
+ax1.legend(['Unemployment Rate', 'Recession Periods'], loc='upper right')
+
 st.pyplot(fig1)
 
 st.markdown("""
