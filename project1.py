@@ -37,6 +37,8 @@ ax1.plot(df["DATE"], df["UNRATE"], label="Unemployment Rate")
 ax1.set_xlabel("Year")
 ax1.set_ylabel("Rate (%)")
 ax1.grid(True)
+ax1.axvspan(pd.Timestamp('2007-12-01'), pd.Timestamp('2009-06-01'),
+            color='gray', alpha=0.3, label='Great Recession')
 st.pyplot(fig1)
 
 st.markdown("""
