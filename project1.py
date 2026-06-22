@@ -90,11 +90,12 @@ Each recovery phase reflects renewed job growth and economic resilience.
 st.header("2. Rolling 12-Month Average")
 
 fig2, ax2 = plt.subplots(figsize=(10,4))
-ax2.plot(df["DATE"], df["Rolling12"], color="orange", label="12-Month Rolling Avg")
+ax2.plot(df["DATE"], df["UNRATE"], color="lightgray", alpha=0.5, label="Monthly Rate")
+ax2.plot(df["DATE"], df["Rolling12"], color="orange", label="12‑Month Rolling Average")
 ax2.set_xlabel("Year")
-ax2.set_ylabel("Rate (%)")
+ax2.set_ylabel("Rate (%)")
 ax2.grid(True)
-ax2.plot(df["DATE"], df["UNRATE"], color="lightgray", alpha=0.5)
+ax2.legend(loc="upper right")
 st.pyplot(fig2)
 
 st.markdown("""
