@@ -54,6 +54,7 @@ ax2.plot(df["DATE"], df["Rolling12"], color="orange", label="12-Month Rolling Av
 ax2.set_xlabel("Year")
 ax2.set_ylabel("Rate (%)")
 ax2.grid(True)
+ax2.plot(df["DATE"], df["UNRATE"], color="lightgray", alpha=0.5)
 st.pyplot(fig2)
 
 st.markdown("""
