@@ -78,8 +78,11 @@ st.pyplot(fig1)
 
 st.markdown("""
 **Interpretation:**  
-Unemployment tends to rise sharply during recessions and fall during expansions. The long-term average hovers around 5–6%, but extreme events—like the 2020 pandemic—can push it far higher. Each downturn is followed by a recovery period as employment rebounds.
+Unemployment rises sharply during recessions (gray bands) and falls during expansions.  
+Major peaks—1982, 2009, 2020—mark severe economic contractions.  
+Each recovery phase reflects renewed job growth and economic resilience.
 """)
+
 
 # -----------------------------
 # Visualization 2 — Rolling 12-Month Average
